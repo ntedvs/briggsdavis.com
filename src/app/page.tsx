@@ -388,7 +388,7 @@ export default function Home() {
       <div className="mt-32 mb-16 text-center">
         <h2 className="mb-4 text-5xl font-bold">Contact</h2>
         <p className="text-xl text-gray-600">
-          Let's discuss how we can help your business grow
+          Let&apos;s discuss how we can help your business grow
         </p>
       </div>
 
