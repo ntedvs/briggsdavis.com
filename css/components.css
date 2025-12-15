@@ -1,0 +1,292 @@
+/* Components - Reusable UI Elements */
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-align: center;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  border: 2px solid var(--color-accent-primary);
+}
+
+.btn--primary:hover {
+  background-color: transparent;
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.btn--primary:active {
+  transform: translateY(0) scale(1);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+}
+
+.btn--large {
+  padding: var(--space-6) var(--space-12);
+  font-size: var(--text-base);
+}
+
+/* Cards */
+
+.card {
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-text-secondary);
+}
+
+.card__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.card__description {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Service Card */
+
+.service-card {
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-text-secondary);
+}
+
+.service-card__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.service-card__description {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Portfolio Card */
+
+.portfolio-card {
+  position: relative;
+  aspect-ratio: 1.75 / 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-tertiary);
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition-base);
+}
+
+.portfolio-card:hover {
+  border-color: var(--color-accent-primary);
+}
+
+.portfolio-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+.portfolio-card:hover .portfolio-card__image {
+  transform: scale(1.05);
+}
+
+.portfolio-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-8);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.portfolio-card:hover .portfolio-card__overlay {
+  opacity: 1;
+}
+
+.portfolio-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-4);
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.1s;
+}
+
+.portfolio-card:hover .portfolio-card__title {
+  transform: translateY(0);
+}
+
+.portfolio-card__description {
+  color: var(--color-text-secondary);
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.15s;
+}
+
+.portfolio-card:hover .portfolio-card__description {
+  transform: translateY(0);
+}
+
+/* Process Step */
+
+.process-step {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.process-step__number {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  border: 1px solid var(--color-border);
+}
+
+.process-step__title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.process-step__description {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Profile Card */
+
+.profile-card {
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-12);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.profile-card__name {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.profile-card__role {
+  font-size: var(--text-base);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-8);
+}
+
+.profile-card__bio {
+  text-align: left;
+  margin-top: var(--space-6);
+}
+
+.profile-card__bio ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-card__bio li {
+  position: relative;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.profile-card__bio li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-primary);
+}
+
+/* Contact Info */
+
+.contact-info {
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+}
+
+.contact-info__name {
+  font-size: var(--text-xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.contact-info__item {
+  margin-bottom: var(--space-4);
+}
+
+.contact-info__label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.contact-info__value {
+  color: var(--color-text-secondary);
+}
+
+.contact-info__value a {
+  color: var(--color-accent-primary);
+  transition: color var(--transition-fast);
+}
+
+.contact-info__value a:hover {
+  color: var(--color-text-primary);
+}
